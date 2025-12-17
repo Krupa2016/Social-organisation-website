@@ -1,0 +1,217 @@
+.upcoming-event-section {
+  padding: 5rem 0;
+  background-color: #f97316;
+}
+
+.upcoming-event-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.upcoming-event-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  color: #1e3a8a;
+  font-family: serif;
+  letter-spacing: -0.02em;
+}
+
+.upcoming-event-subtitle {
+  color: #1e3a8a;
+}
+
+/* Slider Container */
+.upcoming-event-slider {
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+}
+
+/* Individual Event Card */
+.upcoming-event-card {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.7s ease-in-out;
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.upcoming-event-card-active {
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+}
+
+.upcoming-event-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.upcoming-event-image-wrapper {
+  height: 320px;
+}
+
+.upcoming-event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upcoming-event-content {
+  background-color: #1e3a8a;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.upcoming-event-content-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.75rem;
+}
+
+.upcoming-event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: #d1d5db;
+}
+
+.upcoming-event-date {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.upcoming-event-date-icon {
+  flex-shrink: 0;
+  color: #fbbf24;
+}
+
+.upcoming-event-date-label {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.upcoming-event-description {
+  line-height: 1.8;
+  font-size: 0.9375rem;
+  color: #e5e7eb;
+}
+
+/* Navigation Buttons */
+.upcoming-event-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  border: none;
+  padding: 0.875rem;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #1e3a8a;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.upcoming-event-nav-button:hover {
+  background-color: #ffffff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.upcoming-event-nav-button:active {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.upcoming-event-nav-button-prev {
+  left: 1.5rem;
+}
+
+.upcoming-event-nav-button-next {
+  right: 1.5rem;
+}
+
+/* Dots Indicator */
+.upcoming-event-dots {
+  position: absolute;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.625rem;
+  z-index: 10;
+}
+
+.upcoming-event-dot {
+  height: 11px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 11px;
+  min-width: 11px;
+  min-height: 11px;
+}
+
+.upcoming-event-dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.upcoming-event-dot-active {
+  background-color: #ffffff;
+  width: 32px;
+}
+
+@media (min-width: 768px) {
+  .upcoming-event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .upcoming-event-image-wrapper {
+    height: auto;
+  }
+
+  .upcoming-event-content {
+    padding: 3rem;
+  }
+
+  .upcoming-event-title {
+    font-size: 2.75rem;
+  }
+
+  .upcoming-event-slider {
+    min-height: 450px;
+  }
+}
+
+@media (min-width: 640px) {
+  .upcoming-event-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .upcoming-event-container {
+    padding: 0 2rem;
+  }
+}
