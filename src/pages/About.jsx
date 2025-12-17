@@ -1,8 +1,7 @@
-import Navbar from "./components/Navbar";
-export default function AboutUs() {
+
+export default function About() {
   return (
     <>
-     <Navbar />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi&display=swap');
 
