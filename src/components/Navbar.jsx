@@ -17,7 +17,7 @@ const Navbar = () => {
       {/* Right: Navigation */}
       <div className="navbar-right">
         <Link to="/">मुखपृष्ठ</Link>
-        <Link to="/about">आमच्याबद्दल</Link>
+        <Link to="/About">आमच्याबद्दल</Link>
         <Link to="/Events">उपक्रम</Link>
         <Link to="/contact">संपर्क</Link>
       </div>
