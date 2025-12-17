@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
+
       {/* Left: Logo */}
       <div className="navbar-left">
         <img
@@ -12,13 +14,14 @@ const Navbar = () => {
         />
       </div>
 
-      {/* Right: Links */}
+      {/* Right: Navigation */}
       <div className="navbar-right">
-        <a href="#home">मुखपृष्ठ</a>
-        <a href="#about">आमच्याबद्दल</a>
-        <a href="#events">उपक्रम</a>
-        <a href="#contact">संपर्क</a>
+        <Link to="/">मुखपृष्ठ</Link>
+        <Link to="/about">आमच्याबद्दल</Link>
+        <Link to="/Events">उपक्रम</Link>
+        <Link to="/contact">संपर्क</Link>
       </div>
+
     </nav>
   );
 };
