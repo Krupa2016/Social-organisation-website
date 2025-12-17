@@ -1,5 +1,5 @@
 import "./App.css";
-import Navbar from "./components/Navbar.jsx";
+import Navbar from "./components/navbar.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Events from "./pages/Events.jsx";
 import EventPage from "./components/EventPage.jsx";
