@@ -1,4 +1,4 @@
-import "./EventGallery.css";
+import "../styles/EventGallery.css";
 
 const EventGallery = ({
   years,

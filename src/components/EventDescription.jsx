@@ -1,4 +1,4 @@
-import "./EventDescription.css";
+import "../styles/EventDescription.css";
 
 const EventDescription = ({ title, image, description }) => {
   return (

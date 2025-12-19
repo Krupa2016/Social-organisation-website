@@ -10,10 +10,11 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/events/:eventKey" element={<EventPage />} />
-        <Route path="/Events" element={<Events />} />
-            <Route path="/" element={<Events />} />
+        <Route path="/" element={<Events />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Events" element={<Events />} />
+        <Route path="/events/:eventKey" element={<EventPage />} />
+      
       </Routes>
     </BrowserRouter>
   );
