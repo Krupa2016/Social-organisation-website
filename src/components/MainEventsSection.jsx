@@ -13,9 +13,9 @@ const MainEventsSection = () => {
   ];
 
   return (
-    <section id="events" className="main-events-section">
-      <h2 className="main-events-title">आगमे मुख्य उपक्रम</h2>
-      <div className="main-events-grid">
+    <section id="events" className="home-main-events-section">
+      <h2 className="home-main-events-title">आगमे मुख्य उपक्रम</h2>
+      <div className="home-main-events-grid">
         {events.map(e => (
           <EventCard key={e.id} {...e} />
         ))}

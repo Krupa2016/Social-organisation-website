@@ -39,31 +39,31 @@ const HeroSlider = () => {
   return (
     <div
       id="home"
-      className="hero-slider"
+      className="main-hero-slider"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`hero-slide ${index === currentSlide ? 'hero-slide-active' : ''}`}
+          className={`main-hero-slide ${index === currentSlide ? 'main-hero-slide-active' : ''}`}
         >
-          <img src={slide.image} alt={slide.title} className="hero-slide-image" />
-          <div className="hero-slide-overlay" />
-          <div className="hero-slide-content">
-            <h1 className="hero-slide-title">{slide.title}</h1>
-            <p className="hero-slide-subtitle">{slide.subtitle}</p>
+          <img src={slide.image} alt={slide.title} className="main-hero-slide-image" />
+          <div className="main-hero-slide-overlay" />
+          <div className="main-hero-slide-content">
+            <h1 className="main-hero-slide-title">{slide.title}</h1>
+            <p className="main-hero-slide-subtitle">{slide.subtitle}</p>
           </div>
         </div>
       ))}
 
-      <button className="hero-nav-button hero-nav-button-prev" onClick={() =>
+      <button className="main-hero-nav-button main-hero-nav-button-prev" onClick={() =>
         setCurrentSlide((currentSlide - 1 + slides.length) % slides.length)
       }>
         <ChevronLeft size={28} />
       </button>
 
-      <button className="hero-nav-button hero-nav-button-next" onClick={() =>
+      <button className="main-hero-nav-button main-hero-nav-button-next" onClick={() =>
         setCurrentSlide((currentSlide + 1) % slides.length)
       }>
         <ChevronRight size={28} />
