@@ -5,6 +5,7 @@ import Events from "./pages/Events.jsx";
 import About from "./pages/About.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
 import Footer from "./components/Footer.jsx"
+import Member from "./pages/Member.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/About" element={<About />} />
         <Route path="/Events" element={<Events />} />
+        <Route path="/Member" element={<Member />} />
       </Routes>
       <Footer/>
     </BrowserRouter>

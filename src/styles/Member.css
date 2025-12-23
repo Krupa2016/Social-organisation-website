@@ -1,0 +1,119 @@
+/* WALL BACKGROUND */
+.gallery-wall {
+  background-image: url("/brick.jpg");
+  background-repeat: repeat;
+  background-size: 361px 468px;/* 🔥 controls brick size */
+  background-position: top left;
+  background-attachment: fixed;
+  padding: 80px 20px 120px;
+}
+
+/* TITLE */
+.gallery-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 900;
+  color: #f3d7a1;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 0 #2b160a;
+}
+
+/* GRID */
+.gallery-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 80px 60px;
+}
+
+/* ITEM */
+.gallery-item {
+  text-align: center;
+}
+
+/* FRAME SETUP */
+.frame-wrapper {
+  position: relative;
+  width: 280px;
+  margin: auto;
+  margin-bottom: -51px;
+}
+
+.frame-img {
+  width: 100%;
+  display: block;
+}
+
+/* PHOTO INSIDE FRAME */
+
+.member-photo {
+    position: absolute;
+    top: 45px;
+    left: 33px;
+    width: calc(100% - 70px);
+    height: calc(100% - 90px);
+    object-fit: cover;
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+
+/* SCROLL */
+.scroll-wrapper {
+  position: relative;
+  width: 260px;
+  margin: 12px auto 0;
+}
+
+.scroll-wrapper img {
+  width: 100%;
+}
+
+/* TEXT ON SCROLL */
+.scroll-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 85%;
+}
+
+.member-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #4b2a14;
+}
+
+.member-role {
+  font-size: 14px;
+  color: #6e3b16;
+  margin-top: 4px;
+}
+
+
+/* TITLE SCROLL */
+.title-scroll {
+  position: relative;
+  width: 520px;
+  margin: 0 auto 90px;
+}
+
+.title-scroll img {
+  width: 100%;
+  display: block;
+}
+
+.title-scroll-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #4b2a14;
+  text-shadow: 1px 1px 0 #f5e1c8;
+  white-space: nowrap;
+}

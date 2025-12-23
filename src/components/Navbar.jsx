@@ -19,7 +19,7 @@ const Navbar = () => {
         <Link to="/">मुखपृष्ठ</Link>
         <Link to="/About">आमच्याबद्दल</Link>
         <Link to="/Events">उपक्रम</Link>
-        <Link to="/contact">संपर्क</Link>
+        <Link to="/Member">संपर्क</Link>
       </div>
 
     </nav>
