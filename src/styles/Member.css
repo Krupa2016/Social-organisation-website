@@ -5,8 +5,16 @@
   background-size: 361px 468px;/* 🔥 controls brick size */
   background-position: top left;
   background-attachment: fixed;
-  padding: 80px 20px 120px;
+  padding: 0px 20px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 👈 THIS centers it */
 }
+
+
+
+
+
 
 /* TITLE */
 .gallery-title {
@@ -22,11 +30,16 @@
 /* GRID */
 .gallery-grid {
   max-width: 1200px;
-  margin: auto;
+  width: 100%;
+  margin-top: -70px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+ display: grid;
+   grid-template-columns: repeat(auto-fit, 240px); /* 🔥 MATCH FRAME */
   gap: 80px 60px;
+  justify-content: center; /* 🔥 THIS IS THE KEY */
 }
+
+
 
 /* ITEM */
 .gallery-item {
@@ -36,8 +49,7 @@
 /* FRAME SETUP */
 .frame-wrapper {
   position: relative;
-  width: 280px;
-  margin: auto;
+  width: 240px;
   margin-bottom: -51px;
 }
 
@@ -90,15 +102,18 @@
   font-size: 14px;
   color: #6e3b16;
   margin-top: 4px;
+  font-weight: 700;
 }
 
 
 /* TITLE SCROLL */
+
 .title-scroll {
   position: relative;
-  width: 520px;
-  margin: 0 auto 90px;
+  width: 444px;
+  margin-bottom: 25px; /* only bottom spacing */
 }
+
 
 .title-scroll img {
   width: 100%;
@@ -116,4 +131,57 @@
   color: #4b2a14;
   text-shadow: 1px 1px 0 #f5e1c8;
   white-space: nowrap;
+}
+
+
+
+
+
+
+/* mobile view */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    margin-top: -40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .frame-wrapper {
+    width: 220px;
+    margin-bottom: -40px;
+  }
+
+  .scroll-wrapper {
+    width: 210px;
+  }
+}
+
+@media (max-width: 480px) {
+  .member-photo {
+    top: 35px;
+    left: 26px;
+    width: calc(100% - 55px);
+    height: calc(100% - 75px);
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-scroll {
+    width: 280px;
+  }
+
+  .title-scroll-text {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-wall {
+    padding: 0px 10px 80px;
+    background-attachment: scroll; /* fixes mobile lag */
+  }
 }
