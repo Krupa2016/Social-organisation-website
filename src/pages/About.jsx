@@ -30,6 +30,7 @@ export default function About() {
 
         /* ===== VIDEO SECTION ===== */
         .video-section {
+          margin-top:30px;
           background: white;
           padding: 30px;
           border-radius: 12px;

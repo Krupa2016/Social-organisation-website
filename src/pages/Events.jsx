@@ -1,18 +1,20 @@
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import '../styles/Events.css';
 
-import "../styles/Events.css";
-import HeroSlider from "../components/HeroSlider.jsx";
+import EventHero from '../components/EventHero';
+import EventMainCarousel from '../components/EventMainCarousel';
+import EventUpcomingSection from '../components/EventUpcomingSection';
+import EventsDisplay from '../components/EventsDisplay';
 
-const Events = () => {
-  const navigate = useNavigate();
-
+const EventPage = () => {
   return (
-    <>
-    <HeroSlider />
-     
-    </>
-   
+    <div className="events-page">
+      <EventHero />
+      <EventsDisplay />
+      {/* <EventMainCarousel /> */}
+      <EventUpcomingSection />
+    </div>
   );
 };
 
-export default Events;
+export default EventPage;

@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi&family=Cinzel:wght@600;700&display=swap');
+
+.council-page {
+  font-family: 'Tiro Devanagari Marathi', 'Cinzel', serif;
+  min-height: 100vh;
+  /* Background image of the Darbar Hall */
+  background: 
+    linear-gradient(to bottom, rgba(30,10,0,0.5) 0%, rgba(30,10,0,0.8) 100%),
+    url('../assets/darbar-hall.png') no-repeat center center fixed;
+  background-size: cover;
+  padding: 110px 20px 40px; /* Account for navbar gap */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff3d1;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ornate Frame around the entire page */
+.council-frame {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  border: 16px solid #5c3018;
+  border-radius: 12px;
+  pointer-events: none;
+  box-shadow: 
+    inset 0 0 40px rgba(0,0,0,0.9),
+    0 0 20px rgba(0,0,0,0.8);
+  border-image: repeating-linear-gradient(45deg, #5c3018 0%, #3a1c0d 5%, #5c3018 10%) 16;
+  z-index: 0;
+}
+
+.council-frame::before {
+  content: "";
+  position: absolute;
+  top: -20px; bottom: -20px; left: -20px; right: -20px;
+  border: 4px solid #b8860b;
+  border-radius: 16px;
+}
+
+.council-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title Section */
+.council-header {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  animation: fadeUp 1s ease-out;
+}
+
+.council-emblem {
+  font-size: 24px;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.council-marathi-quote {
+  font-size: 18px;
+  color: #e0c8a0;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.council-title {
+  font-family: 'Cinzel', serif;
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #fff3d1;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(212, 175, 55, 0.4);
+  margin: 0;
+}
+
+.council-subtitle {
+  font-size: 16px;
+  color: #e0c8a0;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.gold-divider {
+  width: 150px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #d4af37, transparent);
+  margin: 20px auto;
+}
+
+/* Ivory Plaque Base */
+.ivory-plaque {
+  background: radial-gradient(circle at center, #fdfbf7 0%, #ede3c7 100%);
+  border: 6px solid #5c3018;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 
+    0 15px 30px rgba(0,0,0,0.5),
+    inset 0 0 20px rgba(139,69,19,0.2);
+  color: #3b110a;
+  text-align: center;
+  padding: 30px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ivory-plaque:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 25px 40px rgba(0,0,0,0.7),
+    inset 0 0 20px rgba(212, 175, 55, 0.3);
+  border-color: #7a3910;
+}
+
+.ivory-plaque:hover::before, .ivory-plaque:hover::after {
+  border-color: #fce69a;
+}
+
+/* Gold corner ornaments using pseudo elements */
+.ivory-plaque::before, .ivory-plaque::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #d4af37;
+}
+
+.ivory-plaque::before {
+  top: 5px; left: 5px;
+  border-right: none; border-bottom: none;
+}
+.ivory-plaque::after {
+  bottom: 5px; right: 5px;
+  border-left: none; border-top: none;
+}
+
+.plaque-inner-border {
+  position: absolute;
+  top: 10px; bottom: 10px; left: 10px; right: 10px;
+  border: 1px solid rgba(139,69,19,0.3);
+  pointer-events: none;
+}
+
+/* President Card */
+.president-card {
+  width: 380px;
+  margin: 20px auto 40px;
+  animation: fadeUp 1s ease-out 0.2s both;
+}
+
+.card-title-tag {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to right, #3b110a, #5c1810, #3b110a);
+  color: #d4af37;
+  padding: 5px 20px;
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  border: 1px solid #d4af37;
+  border-radius: 4px;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.member-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2a2a2a, #111);
+  margin: 0 auto 20px;
+  border: 4px solid #d4af37;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4), inset 0 0 20px rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.1);
+}
+
+.member-photo svg {
+  width: 80px;
+  height: 80px;
+  color: rgba(255,255,255,0.2);
+}
+
+.member-name {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.member-role {
+  color: #8b0000;
+  font-size: 18px;
+  font-family: 'Cinzel', serif;
+}
+
+/* Executive Council Panel */
+.executive-panel {
+  background: linear-gradient(to bottom, rgba(59, 17, 10, 0.8), rgba(30, 10, 0, 0.9));
+  border: 3px solid #5c3018;
+  border-radius: 12px;
+  padding: 50px 30px;
+  width: 100%;
+  margin-bottom: 40px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  animation: fadeUp 1s ease-out 0.4s both;
+}
+
+.panel-title {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #d4af37;
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  letter-spacing: 4px;
+  background: #1e0a00;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.panel-title::before, .panel-title::after {
+  content: "◈";
+  color: #8b4513;
+  font-size: 18px;
+}
+
+.executive-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.executive-card {
+  width: 250px;
+}
+
+.executive-card .member-photo {
+  width: 110px;
+  height: 110px;
+}
+
+.executive-card .member-name {
+  font-size: 22px;
+}
+
+.executive-card .member-role {
+  font-size: 16px;
+}
+
+/* Committee Members */
+.committee-section {
+  width: 100%;
+  margin-bottom: 60px;
+  position: relative;
+  animation: fadeUp 1s ease-out 0.6s both;
+}
+
+.committee-title {
+  text-align: center;
+  color: #d4af37;
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.committee-title::before, .committee-title::after {
+  content: "";
+  height: 1px;
+  width: 100px;
+  background: linear-gradient(to right, transparent, #d4af37, transparent);
+}
+
+.committee-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.committee-card {
+  width: 240px;
+  padding: 20px;
+  /* Top curved arch look */
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.committee-card .member-photo {
+  width: 100px;
+  height: 100px;
+}
+
+.committee-card .member-name {
+  font-size: 20px;
+}
+
+.committee-card .member-role {
+  font-size: 15px;
+}
+
+/* Bottom Quote Section */
+.quote-section {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeUp 1s ease-out 0.8s both;
+}
+
+.lion-statue {
+  width: 180px;
+  height: auto;
+  position: absolute;
+  bottom: -20px;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.8));
+  z-index: 2;
+}
+
+.lion-left {
+  left: -80px;
+}
+
+.lion-right {
+  right: -80px;
+  transform: scaleX(-1);
+}
+
+.quote-plaque {
+  background: linear-gradient(to right, #3b110a, #5c1810, #3b110a);
+  border: 4px solid #d4af37;
+  border-radius: 8px;
+  padding: 30px 60px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+  width: 100%;
+  z-index: 1;
+}
+
+.quote-text {
+  font-size: 28px;
+  color: #fff3d1;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.quote-icon {
+  font-size: 24px;
+  color: #d4af37;
+  background: #3b110a;
+  border: 2px solid #d4af37;
+  padding: 5px 15px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .council-title { font-size: 48px; }
+  .lion-left { left: 0; }
+  .lion-right { right: 0; }
+  .quote-plaque { padding: 30px 40px; margin: 0 60px; width: auto; }
+}
+
+@media (max-width: 768px) {
+  .council-title { font-size: 36px; }
+  .council-marathi-quote { font-size: 14px; }
+  .executive-panel { padding: 40px 15px; }
+  .lion-statue { width: 120px; }
+  .quote-plaque { margin: 0 40px; }
+  .quote-text { font-size: 22px; }
+  
+  .president-card { width: 300px; }
+  
+  .council-frame {
+    left: 10px; right: 10px; top: 10px; bottom: 10px;
+  }
+}

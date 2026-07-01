@@ -19,9 +19,9 @@ const Navbar = () => {
         <Link to="/">मुखपृष्ठ</Link>
         <Link to="/About">आमच्याबद्दल</Link>
         <Link to="/Events">उपक्रम</Link>
-        <Link to="/contact">संपर्क</Link>
+        <Link to="/council">The Council</Link>
+        <Link to="/Members">members</Link>
       </div>
-
     </nav>
   );
 };
